@@ -1,0 +1,46 @@
+#Simple calc by Karwan Weesa
+# Program Main Menu
+def menu_prompt_one():
+      menu_prompt = input("Welcome to Karwan's simple calculator, what would you like to do today?(please respond with the corrosoponding numbers)\n1. Open Calculator\n2. Settings\n3. FAQ\n4. Credits\n5. Quit Program\n\n").casefold()
+      while True:
+       if menu_prompt in ("1", "one", "Open Program"):
+           num1 = float(input("Enter your first number: "))
+           num2 = float (input("enter your second number"))
+           operator = input("What would you like to do?\n1. Add\n2. Subtract\n3. Multiply\n4. Divide").casefold()
+           if operator == "1":
+               sum_result = num1 + num2
+               print(f"your answer is:\n{sum_result}")
+               print("taking you to main menu....")
+               print(menu_prompt_one())
+           elif operator == "2":
+               sum_result = num1 - num2
+               print(f"your answer is:\n{sum_result}")
+               print("taking you back to the main menu...")
+               print(menu_prompt_one())
+           elif operator == "3":
+               sum_result = num1 * num2
+               print(f"Your answer is {sum_result}")
+               print("taking you back to the main menu...")
+               print(menu_prompt_one())
+           elif operator == "4":
+               sum_result = num1 / num2
+               print(f"Your answer is {sum_result}")
+               print("taking you back to the main menu...")
+               print(menu_prompt_one())
+
+#END OF BACKEND CALCULATIONS
+
+               
+       if menu_prompt in ("2", "two", "Settings"):
+           settings_ui = input("Settings:\n1. Set Username\n2. Go Back\nwell, theres not much here really.. :/")
+           if settings_ui == 1:
+               username = input("enter your username: ")
+               print(f"Hello, {username}.")
+               print("\n\ntaking you back to the main menu....")
+               print(menu_prompt_one())
+           
+           
+              
+            
+print(menu_prompt_one())
+            
